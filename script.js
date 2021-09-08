@@ -6,17 +6,37 @@ let body = document.querySelector('body');
 // menu
 let header = document.createElement('header');
 let nav = document.createElement('nav');
-let a = document.createElement('a');
+let a1 = document.createElement('a');
+let a2 = document.createElement('a');
+let a3 = document.createElement('a');
+let a4 = document.createElement('a');
+let a5 = document.createElement('a');
 
-nav.style.backgroundColor = "lavender";
+nav.style.backgroundColor = "salmon";
 nav.style.visibility = "hidden";
-a.setAttribute("href", "#exo1");
-a.setAttribute("title", "Exercice 1");
-a.textContent = "Exercice 1";
+
+a1.setAttribute("href", "#exo1");
+a1.setAttribute("title", "Exercice 1");
+a1.textContent = "Exercice 1 🍔 ";
+a2.setAttribute("href", "#exo2");
+a2.setAttribute("title", "Exercice 2");
+a2.textContent = "Exercice 2 🍔 ";
+a3.setAttribute("href", "#exo3");
+a3.setAttribute("title", "Exercice 3");
+a3.textContent = "Exercice 3 🍔 ";
+a4.setAttribute("href", "#exo4");
+a4.setAttribute("title", "Exercice 4");
+a4.textContent = "Exercice 4 🍔 ";
+a5.setAttribute("href", "#exo5");
+a5.setAttribute("title", "Exercice 5");
+a5.textContent = "Exercice 5";
 
 body.appendChild(header);
 header.appendChild(nav);
-nav.appendChild(a);
+nav.appendChild(a1);
+nav.appendChild(a2);
+nav.appendChild(a3);
+nav.appendChild(a4);
 
 // Saut de ligne (à appeler au besoin)
 let br = document.createElement('br');
