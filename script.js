@@ -18,6 +18,9 @@ body.appendChild(header);
 header.appendChild(nav);
 nav.appendChild(a);
 
+// Saut de ligne (à appeler au besoin)
+let br = document.createElement('br');
+
 // section
 let section = document.createElement('section');
 
@@ -47,8 +50,8 @@ let title_exo3 = document.createElement('h2');
 title_exo3.setAttribute("id", "exo3");
 title_exo3.textContent = "Exercice 3 - Générateur de citation";
 
-section.appendChild(exo2);
-exo2.appendChild(title_exo2);
+section.appendChild(exo3);
+exo3.appendChild(title_exo3);
 
 // Exo 4
 let exo4 = document.createElement('article');

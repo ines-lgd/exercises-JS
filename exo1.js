@@ -2,12 +2,11 @@
 // (chiffres, lettres min&maj, caractères spéciaux)
 
 // création d'un button pour lancer l'affichage
-let button = document.createElement('button');
-button.setAttribute("id", "random-button");
-button.setAttribute("onclick", "generatePassword()");
-button.textContent = "Random password";
+let random_button = document.createElement('button');
+random_button.setAttribute("id", "random-button");
+random_button.textContent = "New random password";
 
-exo1.appendChild(button);
+exo1.appendChild(random_button);
 
 // création d'une div pour y afficher le résultat
 let random_div = document.createElement('div');
@@ -20,7 +19,7 @@ exo1.appendChild(random_div);
 function generatePassword(password_length = 12) {
     
     // liste de caractères 
-    let character_list = "!\"#$%&'(	)*+,-./0123456789:;<=>\?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^`abcdefghijklmnopqrstuvwxyz{|}~€ˆ–—ŸÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÔÕÖÙÚÛÜÝàáâãäçèéêë";
+    let character_list = "!\"#$%&'(	)*+,-_./0123456789:;<=>\?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^`abcdefghijklmnopqrstuvwxyz{|}~€ˆŸÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÔÕÖÙÚÛÜÝàáâãäçèéêë";
     // liste convertie en tableau
     character_list = character_list.split("");
 
@@ -39,8 +38,9 @@ function generatePassword(password_length = 12) {
     // si la longueur est un nombre, le résultat s'affiche, sinon "Erreur"
     // (vérification inutile sans prompt)
     let result = (password_length != /[0-9]/) ? password : "Erreur";
-    return document.getElementById("random-div").textContent = result;
+    document.getElementById("random-div").textContent = result;
 };
 
 // lancement de la fonction au click
-document.getElementById("random-button").addEventListener('click', generatePassword());
+random_button.setAttribute("onclick", "generatePassword()");
+//document.getElementById("random-button").addEventListener('click', generatePassword);
