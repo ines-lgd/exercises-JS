@@ -14,8 +14,8 @@ exo4.appendChild(toggle);
 toggle_id = toggle.getAttribute("id");
 
 // Changement en fonction de l'id du bouton
-function changeMode(){
-    if(toggle_id == "dark-toggle"){
+function changeMode(id){
+    if(id == "dark-toggle"){
         body.style.backgroundColor = '#111';
         body.style.color = '#eee';
     
@@ -23,7 +23,7 @@ function changeMode(){
         toggle.setAttribute("title", "Mettre le mode jour");
         toggle.textContent = "Mettre le mode jour 🌞"; 
         toggle.setAttribute("id", "light-toggle"); 
-    }else if(toggle_id == "light-toggle"){
+    }else if(id == "light-toggle"){
         body.style.backgroundColor = '#eee';
         body.style.color = '#111';
         
@@ -38,10 +38,10 @@ function changeMode(){
 /// Selection du bouton en Mode foncé pour activer le mode clair
 let dark_toggle = document.getElementById('dark-toggle');
 dark_toggle.addEventListener('click', function () {
-    changeMode(); 
+    changeMode(this.id); 
 });
 /// Selection du bouton en Mode clair pour activer le mode foncé
 let light_toggle = document.getElementById('light-toggle');
 light_toggle.addEventListener('click', function () {
-    changeMode(); 
+    changeMode(this.id); 
 });

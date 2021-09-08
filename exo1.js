@@ -28,7 +28,7 @@ function generatePassword(password_length = 12) {
 
     // boucle répétée par défaut 12x
     for (i = 0; i < password_length; i++) {
-        // nombre au hasard inférieur au nombre de caractère dans la liste
+        // nombre entier au hasard inférieur au nombre de caractère dans la liste
         let random = Math.floor(Math.random() * character_list.length);
         // ce nombre devient un index pour choisir un caractère dans la liste
         // le mot de passe se complète jusqu'à la fin de la boucle 
